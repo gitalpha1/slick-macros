@@ -1,0 +1,11 @@
+<!DOCTYPE DF SYSTEM "http://www.slickedit.com/dtd/vse/vsdelta/22.0/vsdelta.dtd">
+<DF FV="22.0.0">
+<M V="2" Cmt="" D="2018/06/01" T="11:11:10084" E="text" NL="\13\10"/>
+<D V="0" E="text" NL="\13\10" Cmt="" D="2018/06/01" T="11:11:4436">
+<C S="0" E="85"/>
+</D>
+<D V="1" E="text" NL="\13\10" Cmt="" D="2018/06/01" T="11:11:9943">
+<C S="0" E="85"/>
+<C S="92" E="123"/>
+</D>
+</DF>

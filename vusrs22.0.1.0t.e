@@ -1,0 +1,2223 @@
+#include 'slick.sh'
+_form _tbproject_tools_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Project Tools";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="next-error";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Process the Next Compiler Error Message";
+      p_Nofstates=1;
+      p_picture="bbnext_error.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="project-build";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Run the Build Command for the Current Project";
+      p_Nofstates=1;
+      p_picture="bbmake.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="project-compile";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Run the Compile Command for the Current Project";
+      p_Nofstates=1;
+      p_picture="bbcompile.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=1515;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="vccheckin";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Check in Current File into Version Control System";
+      p_Nofstates=1;
+      p_picture="bbcheckin.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1605;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="vccheckout";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Check out or Update Current File from Version Control System";
+      p_Nofstates=1;
+      p_picture="bbcheckout.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2070;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbedit_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Edit";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="maybe-lowcase-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Translate Characters in Current Word or Selection to Lower Case";
+      p_Nofstates=1;
+      p_picture="bblowcase.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="maybe-upcase-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Translate Characters in Current Word or Selection to Upper Case";
+      p_Nofstates=1;
+      p_picture="bbupcase.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="shift-selection-left";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Left Shift Selection";
+      p_Nofstates=1;
+      p_picture="bbshift_left.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="shift-selection-right";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Right Shift Selection";
+      p_Nofstates=1;
+      p_picture="bbshift_right.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1515;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="reflow-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Word Wrap Current Paragraph or Selection";
+      p_Nofstates=1;
+      p_picture="bbreflow.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1980;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="unindent-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Unindent Selected Text";
+      p_Nofstates=1;
+      p_picture="bbunindent_selection.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2445;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="indent-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Indent Selected Text";
+      p_Nofstates=1;
+      p_picture="bbindent_selection.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=7;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2910;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="convert_tabs2spaces";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Convert Tabs to Spaces";
+      p_Nofstates=1;
+      p_picture="bbtabs_to_spaces.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=8;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3375;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="convert_spaces2tabs";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Convert Indentation Spaces to Tabs";
+      p_Nofstates=1;
+      p_picture="bbspaces_to_tabs.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=9;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3840;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="find-matching-paren";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Find the Matching Parenthesis or Begin/End Structure Pairs";
+      p_Nofstates=1;
+      p_picture="bbfind_matching_paren.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=10;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4305;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbseldisp_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Selective Display";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="show-procs";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Outline Current File with Function Headings";
+      p_Nofstates=1;
+      p_picture="bbshow_procs.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="hide-code-block";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Hide Lines inside Current Code Block";
+      p_Nofstates=1;
+      p_picture="bbhide_code_block.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="selective-display";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Display Selective Display Dialog Box";
+      p_Nofstates=1;
+      p_picture="bbselective_display.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="hide-selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Hide Selected Lines";
+      p_Nofstates=1;
+      p_picture="bbhide_selection.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1515;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="plusminus";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggles between hiding and showing the code block under the cursor";
+      p_Nofstates=1;
+      p_picture="bbplusminus.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1980;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="show-all";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="End Selective Display. All Lines Are Displayed and Outline Bitmaps Are Removed.";
+      p_Nofstates=1;
+      p_picture="bbshow_all.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2445;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbtools_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Tools";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="beautify_selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Beautify Selection or Entire Buffer";
+      p_Nofstates=1;
+      p_picture="bbbeautify.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="diff";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Bring Up DIFFzilla"VSREGISTEREDTM;
+      p_Nofstates=1;
+      p_picture="bbdiff.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="merge";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Merge Two Sets of Changes Made to a File";
+      p_Nofstates=1;
+      p_picture="bbmerge.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="find-file";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Search for File";
+      p_Nofstates=1;
+      p_picture="bbfind_file.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1515;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="calculator";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Display Calculator Dialog Box";
+      p_Nofstates=1;
+      p_picture="bbcalculator.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1980;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="dos";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Run the Operating System Command Shell";
+      p_Nofstates=1;
+      p_picture="bbshell.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2445;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="spell-check M";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Spell Check from Cursor or Selected Text";
+      p_Nofstates=1;
+      p_picture="bbspell.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=7;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2910;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="hex";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggle Hex Editing";
+      p_Nofstates=1;
+      p_picture="bbhex.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=8;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3375;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbxml_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="XML";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="beautify_selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Beautify Selection or Entire Buffer";
+      p_Nofstates=1;
+      p_picture="bbbeautify.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="xml-validate";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Validate XML Document";
+      p_Nofstates=1;
+      p_picture="bbxml_validate.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="xml-wellformedness";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Check for Well-Formedness";
+      p_Nofstates=1;
+      p_picture="bbxml_wellformedness.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_menu _grep_menu_default {
+   "Quick Search","quick-search","","","Searches for current word or selection";
+   "Filter Search Results...","filter-search-results","","","Refine search results";
+   "-","","","","";
+   "Open as Editor Window","grep-command-menu s","","","";
+   "Go to Line","grep-command-menu g","","","";
+   "Bookmark Line","grep-command-menu b","","","";
+   "-","","","","";
+   "Clear Window","grep-command-menu c","","","";
+   "Align Columns","grep-command-menu a","","","";
+   "Collapse All","grep-command-menu h","","","";
+   "Expand All","grep-command-menu x","","","";
+   "set binary filter","set-binary-filter","","","";
+   "remove binary","try-remove-binary","","","";
+   "Show conte&xt","XSHOW_SEARCH_CONTEXT_FUNCTION","","help context menu","";
+}
+_form _tbhtml_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="HTML";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_body";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert or Adjust Body Tag in Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_body.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_styles";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Style Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_style.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_image";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Image into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_image.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_link";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Link into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_link.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1515;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_anchor";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Target into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_anchor.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1980;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_applet";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Java Applet into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_applet.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2445;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_script";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Script or Script Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_script.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=7;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2910;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_hline";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Horizontal Line into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_hline.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=8;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3375;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_rgb_value";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert RGB Value into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_rgb_color.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=9;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3840;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=10;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=4305;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_heading";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Heading Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_head.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=11;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4395;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_paragraph";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Paragraph Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_paragraph.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=12;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4860;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_bold";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Bold Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_bold.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=13;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5325;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_italic";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Italic Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_italic.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=14;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5790;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_uline";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Underline Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_underline.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=15;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=6255;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_font";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Font Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_font.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=16;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=6720;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_center";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Align Center Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_center.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=17;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=7185;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_right";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Align Right Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_right.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=18;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=7650;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_list";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Ordered/Unordered Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_list.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=19;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=8115;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=20;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=8580;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_table";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Table Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_table.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=21;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=8670;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert-html-table-row";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Table Row Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_table_row.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=22;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=9135;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_table_col";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Table Cell Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_table_cell.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=23;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=9600;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_table_header";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Table Header Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_table_header.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=24;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=10065;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="insert_html_table_caption";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Insert Table Caption Tag into Current HTML File";
+      p_Nofstates=1;
+      p_picture="bbhtml_table_caption.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=25;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=10530;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=26;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=10995;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="html-preview";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Bring up Web Browser or Display HTML File in Web Browser";
+      p_Nofstates=1;
+      p_picture="bbhtml_preview.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=27;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=11085;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="spell-check M";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Spell Check from Cursor or Selected Text";
+      p_Nofstates=1;
+      p_picture="bbspell.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=28;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=11550;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="h_beautify_selection";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Beautify Selection or Entire Buffer";
+      p_Nofstates=1;
+      p_picture="bbbeautify.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=29;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=12015;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="ftpOpen";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Activate FTP Tab for Opening FTP Files";
+      p_Nofstates=1;
+      p_picture="bbftp.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=30;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=12480;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbvc_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Version Control";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-diff-with-tip";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Diff current file with the most recent version";
+      p_Nofstates=1;
+      p_picture="bbvc_diff.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-diff-current-symbol_with-tip";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Diff the current symbol with the most recent version";
+      p_Nofstates=1;
+      p_picture="bbvc_diff_symbol.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-history";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Show Version Control history for the current file";
+      p_Nofstates=1;
+      p_picture="bbvc_history.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=1515;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-commit";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Checks in current file";
+      p_Nofstates=1;
+      p_picture="bbcheckin.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1605;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-checkout";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Checks out source code from Version Control";
+      p_Nofstates=1;
+      p_picture="bbcheckout.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2070;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="vclock";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Locks the current file without checking out the file";
+      p_Nofstates=1;
+      p_picture="bbvc_lock.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=7;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2535;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="vcunlock";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Unlocks the current file without checking in the file";
+      p_Nofstates=1;
+      p_picture="bbvc_unlock.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=8;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3000;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=9;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=3465;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-update";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Get most recent version of current file from version control";
+      p_Nofstates=1;
+      p_picture="bbvc_update.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=10;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3555;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-gui-mfupdate";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Compare Directory with Version Control";
+      p_Nofstates=1;
+      p_picture="bbvc_dir_update.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=11;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4020;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-gui-mfupdate-project";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Compare current Project with Version Control";
+      p_Nofstates=1;
+      p_picture="bbvc_project_update.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=12;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4485;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-gui-mfupdate-workspace";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Compare Workspace with Version Control";
+      p_Nofstates=1;
+      p_picture="bbvc_workspace_update.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=13;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4950;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=14;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=5415;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="svc-add";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Add Current file to version control";
+      p_Nofstates=1;
+      p_picture="bbvc_add.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=15;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5505;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="vcsetup";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Allows you to choose and configure a Version Control interface";
+      p_Nofstates=1;
+      p_picture="bbvc_setup.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=16;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5970;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+_form _tbdebugbb_form {
+   p_backcolor=0x80000005;
+   p_border_style=BDS_SIZABLE;
+   p_caption="Debug";
+   p_CaptionClick=true;
+   p_forecolor=0x80000008;
+   p_height=900;
+   p_tool_window=true;
+   p_visible=false;
+   p_width=2000;
+   p_x=0;
+   p_y=0;
+   p_eventtab2=_qtoolbar_etab2;
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_restart";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Restart Execution";
+      p_Nofstates=1;
+      p_picture="bbdebug_restart.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=1;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=120;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="project_debug";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Continue Execution";
+      p_Nofstates=1;
+      p_picture="bbdebug_continue.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=2;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=585;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_suspend";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Suspend Execution";
+      p_Nofstates=1;
+      p_picture="bbdebug_suspend.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=3;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1050;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_stop";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Stop Debugging";
+      p_Nofstates=1;
+      p_picture="bbdebug_stop.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=4;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=1515;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=5;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=1980;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_show_next_statement";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Displays the Source Line for the Instruction Pointer";
+      p_Nofstates=1;
+      p_picture="bbdebug_show_next_statement.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=6;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2070;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_step_into";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Step into a Function";
+      p_Nofstates=1;
+      p_picture="bbdebug_step_into.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=7;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=2535;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_step_over";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Step over the Next Statement";
+      p_Nofstates=1;
+      p_picture="bbdebug_step_over.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=8;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3000;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_step_out";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Step out of the Current Function";
+      p_Nofstates=1;
+      p_picture="bbdebug_step_out.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=9;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3465;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_step_deep";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Step into Next Statement (Will Step into Runtimes)";
+      p_Nofstates=1;
+      p_picture="bbdebug_step_deep.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=10;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=3930;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_step_instr";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Step by One Instruction";
+      p_Nofstates=1;
+      p_picture="bbdebug_step_instruction.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=11;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4395;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_run_to_cursor";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Continue until Line Cursor is on";
+      p_Nofstates=1;
+      p_picture="bbdebug_run_to_cursor.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=12;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=4860;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=13;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=5325;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_toggle_breakpoint";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggle Breakpoint";
+      p_Nofstates=1;
+      p_picture="bbdebug_toggle_breakpoint.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=14;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5415;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_toggle_breakpoint_enabled";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggle Breakpoint between Enabled and Disabled";
+      p_Nofstates=1;
+      p_picture="bbdebug_toggle_enabled.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=15;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=5880;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_disable_all_breakpoints";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Disable All Breakpoints";
+      p_Nofstates=1;
+      p_picture="bbdebug_disable_breakpoints.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=16;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=6345;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_breakpoints";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="View or Modify Breakpoints";
+      p_Nofstates=1;
+      p_picture="bbdebug_breakpoints.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=17;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=6810;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="space1";
+      p_Nofstates=1;
+      p_picture='';
+      p_stretch=false;
+      p_style=PSPIC_TOOLBAR_DIVIDER_VERT;
+      p_tab_index=18;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=90;
+      p_x=7275;
+      p_y=40;
+      p_eventtab=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_add_watch";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Add a Watch on the Current Variable";
+      p_Nofstates=1;
+      p_picture="bbdebug_add_watch.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=19;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=7365;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_toggle_disassembly";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggle Display of Disassembly";
+      p_Nofstates=1;
+      p_picture="bbdebug_toggle_disassembly.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=20;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=7830;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+   _image  {
+      p_auto_size=true;
+      p_backcolor=0x80000005;
+      p_border_style=BDS_NONE;
+      p_command="debug_toggle_hex";
+      p_forecolor=0x80000008;
+      p_height=450;
+      p_max_click=MC_SINGLE;
+      p_message="Toggle Between Default and Hexidecimal Variable Display";
+      p_Nofstates=1;
+      p_picture="bbdebug_toggle_hex.svg";
+      p_stretch=false;
+      p_style=PSPIC_HIGHLIGHTED_BUTTON;
+      p_tab_index=21;
+      p_tab_stop=false;
+      p_value=0;
+      p_width=465;
+      p_x=8295;
+      p_y=40;
+      p_eventtab2=_ul2_picture;
+   }
+}
+
+defmain()
+{
+}
